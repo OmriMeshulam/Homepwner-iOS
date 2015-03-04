@@ -42,8 +42,9 @@
 // Required method, row data
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Creating an instance of UITableViewCell, with default appearance
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    // Get a new or recycled cell
+    // implicility creating tableViewCell by Apple to get the benefits of the reuse identifier
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
     // Setting the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
@@ -54,6 +55,14 @@
     cell.textLabel.text = [item description];
     
     return cell;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // Telling the table view which kind of cell it should instantiate if there are no cells in the reuse pool
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 @end
