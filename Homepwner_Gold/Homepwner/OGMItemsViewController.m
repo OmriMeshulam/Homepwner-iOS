@@ -17,9 +17,6 @@
     // Call to superclass's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     
-    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
-    self.tableView.backgroundView = self.backgroundView;
-
     if(self){
         for(int i = 0; i < 5; i++){
             [[OGMItemStore sharedStore] createItem];
@@ -66,6 +63,7 @@
     // Get a new or recycled cell
     // implicility creating tableViewCell by Apple to get the benefits of the reuse identifier
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor clearColor];
     
     // Setting the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
@@ -100,7 +98,11 @@
     self.tableView.tableFooterView = footer;
     
     self.tableView.rowHeight = 60.0;
-    
+
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    self.tableView.backgroundView = self.backgroundView;
+
 }
 
 @end
