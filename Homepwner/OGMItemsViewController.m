@@ -10,6 +10,12 @@
 #import "OGMItemStore.h"
 #import "OGMItem.h"
 
+@interface OGMItemsViewController ()
+
+@property (nonatomic, strong) IBOutlet UIView *headerView;
+
+@end
+
 @implementation OGMItemsViewController
 
 - (instancetype)init
@@ -63,6 +69,56 @@
     
     // Telling the table view which kind of cell it should instantiate if there are no cells in the reuse pool
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
+    UIView *header = self.headerView;
+    [self.tableView setTableHeaderView:header];
+    
 }
+
+- (IBAction)addNewItem:(id)sender
+{
+    // Creating a new OGMItem and adding it to the store
+    OGMItem *newItem = [[OGMItemStore sharedStore] createItem];
+    
+    // Figuring out where that item is in the array
+    NSInteger lastRow = [[[OGMItemStore sharedStore] allItems] indexOfObject:newItem];
+    
+    // Make a new index path for the 0th section, last row
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    // Inserting this row into the table
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (IBAction)toggleEditingMode:(id)sender
+{
+    // If you are already currently in editing mode
+    if(self.isEditing){
+        // Change the text of the button to inform user of state
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        
+        // Turn off editing mode
+        [self setEditing:NO animated:YES];
+    }else{
+        //Change the text of button to inform user of state
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        
+        // Enter editing mode
+        [self setEditing:YES animated:YES];
+    }
+}
+
+- (UIView *)headerView
+{
+    // If the headerView has not been loaded yet
+    if(!_headerView){
+        // Load HeadView.xib
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    
+    return _headerView;
+    
+}
+
 
 @end

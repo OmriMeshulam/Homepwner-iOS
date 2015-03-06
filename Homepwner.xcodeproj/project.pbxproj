@@ -17,6 +17,7 @@
 		CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */; };
 		CF8F89F71AA65C75000DDB8D /* OGMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F89F61AA65C75000DDB8D /* OGMItem.m */; };
 		CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */; };
+		CF9521331AA9458300B0C1A2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9521321AA9458300B0C1A2 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CF8F89F61AA65C75000DDB8D /* OGMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OGMItem.m; path = ../OGMItem.m; sourceTree = "<group>"; };
 		CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemStore.h; sourceTree = "<group>"; };
 		CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemStore.m; sourceTree = "<group>"; };
+		CF9521321AA9458300B0C1A2 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CF8F89F61AA65C75000DDB8D /* OGMItem.m */,
 				CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */,
 				CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */,
+				CF9521321AA9458300B0C1A2 /* HeaderView.xib */,
 				CF8E35711AA5213E00B698B4 /* Main.storyboard */,
 				CF8E35741AA5213E00B698B4 /* Images.xcassets */,
 				CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 				CF8E35731AA5213E00B698B4 /* Main.storyboard in Resources */,
 				CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */,
 				CF8E35751AA5213E00B698B4 /* Images.xcassets in Resources */,
+				CF9521331AA9458300B0C1A2 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
