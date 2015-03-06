@@ -24,9 +24,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if(self){
-        for(int i = 0; i < 5; i++){
-            [[OGMItemStore sharedStore] createItem];
-        }
+        
     }
     
     return self;
@@ -118,6 +116,30 @@
     
     return _headerView;
     
+}
+
+// For deleting a row
+- (void)tableView:(UITableView *)tableView
+    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // If the table view is asking to commit a delete command
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        NSArray *items = [[OGMItemStore sharedStore] allItems];
+        OGMItem *item = items[indexPath.row];
+        [[OGMItemStore sharedStore] removeItem:item];
+        
+        // Also remove that row from the table view with an animation
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:YES];
+    }
+}
+
+- (void) tableView:(UITableView *)tableView
+    moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+        toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [[OGMItemStore sharedStore] moveItemAtIdex:sourceIndexPath.row
+                                       toIndex:destinationIndexPath.row];
 }
 
 

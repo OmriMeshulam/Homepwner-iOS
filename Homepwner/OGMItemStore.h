@@ -21,4 +21,9 @@
 
 - (OGMItem *)createItem;
 
+- (void)removeItem:(OGMItem *)item;
+
+- (void)moveItemAtIdex:(NSUInteger)fromIndex
+               toIndex:(NSUInteger)toIndex;
+
 @end
