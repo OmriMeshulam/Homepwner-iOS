@@ -134,6 +134,7 @@
     }
 }
 
+// For moving a row
 - (void) tableView:(UITableView *)tableView
     moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
         toIndexPath:(NSIndexPath *)destinationIndexPath
