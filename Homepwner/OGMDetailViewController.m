@@ -56,4 +56,10 @@
     item.valueInDollars = [self.valueField.text intValue];
 }
 
+- (void)setItem:(OGMItem *)item
+{
+    _item = item;
+    self.navigationItem.title = item.itemName;
+}
+
 @end
