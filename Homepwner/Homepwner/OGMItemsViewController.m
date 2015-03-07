@@ -13,8 +13,6 @@
 
 @interface OGMItemsViewController ()
 
-@property (nonatomic, strong) IBOutlet UIView *headerView;
-
 @end
 
 @implementation OGMItemsViewController
@@ -27,6 +25,17 @@
     if(self){
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"Homepwner";
+        
+        // Creating a new bar button item that will send
+        // addNewItem: to OGMItemsViewController
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc]
+                                initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                target:self
+                                action:@selector(addNewItem:)];
+        // Setting this bar button item as the right item in the navigationItem
+        navItem.rightBarButtonItem = bbi;
+        
+        navItem.leftBarButtonItem = self.editButtonItem;
     }
     
     return self;
@@ -70,9 +79,6 @@
     // Telling the table view which kind of cell it should instantiate if there are no cells in the reuse pool
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
-    UIView *header = self.headerView;
-    [self.tableView setTableHeaderView:header];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -95,36 +101,6 @@
     
     // Inserting this row into the table
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
-}
-
-- (IBAction)toggleEditingMode:(id)sender
-{
-    // If you are already currently in editing mode
-    if(self.isEditing){
-        // Change the text of the button to inform user of state
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        
-        // Turn off editing mode
-        [self setEditing:NO animated:YES];
-    }else{
-        //Change the text of button to inform user of state
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        
-        // Enter editing mode
-        [self setEditing:YES animated:YES];
-    }
-}
-
-- (UIView *)headerView
-{
-    // If the headerView has not been loaded yet
-    if(!_headerView){
-        // Load HeadView.xib
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
-    }
-    
-    return _headerView;
-    
 }
 
 // For deleting a row
