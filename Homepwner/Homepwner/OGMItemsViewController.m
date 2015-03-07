@@ -9,6 +9,7 @@
 #import "OGMItemsViewController.h"
 #import "OGMItemStore.h"
 #import "OGMItem.h"
+#import "OGMDetailViewController.h"
 
 @interface OGMItemsViewController ()
 
@@ -143,5 +144,18 @@
                                        toIndex:destinationIndexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OGMDetailViewController *detailviewController = [[OGMDetailViewController alloc] init];
+    
+    NSArray *items = [[OGMItemStore sharedStore] allItems];
+    OGMItem *selectedItem = items[indexPath.row];
+    
+    // Giving detail view controller a pointer to the item object in row
+    detailviewController.item = selectedItem;
+    
+    // Push it onto the top of the navigation controllers stack
+    [self.navigationController pushViewController:detailviewController animated:YES];
+}
 
 @end
