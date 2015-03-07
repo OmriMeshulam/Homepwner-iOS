@@ -74,6 +74,13 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 - (IBAction)addNewItem:(id)sender
 {
     // Creating a new OGMItem and adding it to the store
