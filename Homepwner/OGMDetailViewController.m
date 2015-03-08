@@ -8,9 +8,10 @@
 
 #import "OGMDetailViewController.h"
 #import "OGMItem.h"
+#import "OGMImageStore.h"
 
 @interface OGMDetailViewController ()
-    <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+    <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -23,6 +24,10 @@
 @end
 
 @implementation OGMDetailViewController
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -44,6 +49,14 @@
     
     // Use filtered NSDate object to set dateLabel contents
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    
+    NSString *imageKey = self.item.itemKey;
+    
+    // Getting the image for its image key from the image store
+    UIImage *imageToDisplay = [[OGMImageStore sharedStore] imageForKey:imageKey];
+    
+    // Using that image to put on the screen in the imageView
+    self.imageView.image = imageToDisplay;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -90,12 +103,21 @@
     // Get picked image from the info dictionary
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
+    // Storing the image in the OGMImageStore for this key
+    [[OGMImageStore sharedStore] setImage:image forKey:self.item.itemKey];
+    
     // Put that image onto the screen in our image view
     self.imageView.image = image;
     
     // Take the image picker off the screen
     // You must call this dismiss method
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

@@ -67,6 +67,11 @@
         _serialNumber = sNumber;
         // Setting the dateCreated to the current date and time
         _dateCreated = [[NSDate alloc] init];
+        
+        // Creating an NSUUID object - and get its string representation
+        NSUUID *uuid = [[NSUUID alloc]init];
+        NSString *key = [uuid UUIDString];
+        _itemKey = key;
     }
     
     // Returning the address of the newly initialized object

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57A5E51AABD955003ED433 /* OGMImageStore.m */; };
 		CF8E356A1AA5213E00B698B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35691AA5213E00B698B4 /* main.m */; };
 		CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */; };
 		CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356F1AA5213E00B698B4 /* OGMViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF57A5E41AABD955003ED433 /* OGMImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageStore.h; sourceTree = "<group>"; };
+		CF57A5E51AABD955003ED433 /* OGMImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageStore.m; sourceTree = "<group>"; };
 		CF8E35641AA5213E00B698B4 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8E35681AA5213E00B698B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8E35691AA5213E00B698B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				CF8E35741AA5213E00B698B4 /* Images.xcassets */,
 				CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */,
 				CF8E35671AA5213E00B698B4 /* Supporting Files */,
+				CF57A5E41AABD955003ED433 /* OGMImageStore.h */,
+				CF57A5E51AABD955003ED433 /* OGMImageStore.m */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */,
 				CF8E356A1AA5213E00B698B4 /* main.m in Sources */,
 				CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */,
+				CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */,
 				CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */,
 				CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "OGMItemStore.h"
 #import "OGMItem.h"
+#import "OGMImageStore.h"
 
 @interface OGMItemStore()
 
@@ -62,7 +63,11 @@
 
 - (void)removeItem:(OGMItem *)item
 {
-    [self.privateItems removeObjectIdenticalTo:item];
+    NSString *key = item.itemKey;
+    
+    [[OGMImageStore sharedStore] deleteImageForKey:key];
+    
+    [self.privateItems removeObjectIdenticalTo:item];    
 }
 
 - (void)moveItemAtIdex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
