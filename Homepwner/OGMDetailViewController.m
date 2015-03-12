@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+
 @end
 
 @implementation OGMDetailViewController
@@ -73,6 +75,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    UIInterfaceOrientation io = [[UIApplication sharedApplication]statusBarOrientation];
+    [self prepareViewsForOrientation:io];
     
     OGMItem *item = self.item;
     
@@ -159,6 +164,28 @@
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void)prepareViewsForOrientation:(UIInterfaceOrientation)orientation
+{
+    // Is it an iPad? No preparation necessary
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        return;
+    }
+    
+    // Is it in landscape mode?
+    if(UIInterfaceOrientationIsLandscape(orientation)){
+        self.imageView.hidden = YES;
+        self.cameraButton.enabled = NO;
+    }else{
+        self.imageView.hidden = NO;
+        self.cameraButton.enabled = YES;
+    }
+}
+
+- (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self prepareViewsForOrientation:toInterfaceOrientation];
 }
 
 @end

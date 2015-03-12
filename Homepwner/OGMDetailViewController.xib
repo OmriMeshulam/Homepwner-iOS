@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OGMDetailViewController">
             <connections>
+                <outlet property="cameraButton" destination="esz-fG-HHY" id="HvA-RP-f9N"/>
                 <outlet property="dateLabel" destination="HHU-XT-UwD" id="eCT-Ac-1cI"/>
                 <outlet property="nameField" destination="uIG-OY-3vp" id="Pee-va-ErF"/>
                 <outlet property="serialNumberField" destination="Q9r-NB-Dho" id="H3Q-bo-5gd"/>
@@ -45,22 +46,6 @@
                         <rect key="frame" x="44" y="176" width="50" height="21"/>
                     </variation>
                 </label>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-nL-LqG">
-                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="K0D-pI-03A"/>
-                    </constraints>
-                    <items>
-                        <barButtonItem systemItem="camera" id="esz-fG-HHY">
-                            <connections>
-                                <action selector="takePicture:" destination="-1" id="w4B-Sy-G9r"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="-4" y="609" width="414" height="44"/>
-                    </variation>
-                </toolbar>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57Y-1N-mSu">
                     <rect key="frame" x="55" y="139" width="50" height="21"/>
                     <constraints>
@@ -119,6 +104,22 @@
                         <outlet property="delegate" destination="-1" id="Ocq-wc-yek"/>
                     </connections>
                 </textField>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-nL-LqG">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="K0D-pI-03A"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem systemItem="camera" id="esz-fG-HHY">
+                            <connections>
+                                <action selector="takePicture:" destination="-1" id="w4B-Sy-G9r"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="-4" y="609" width="414" height="44"/>
+                    </variation>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
