@@ -29,6 +29,47 @@
     [self.view endEditing:YES];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    UIImageView *iv = [[UIImageView alloc]initWithImage:nil];
+    
+    // The contentMode of the image view in the XIB was Aspect fit:
+    iv.contentMode = UIViewContentModeScaleAspectFit;
+    
+    // Do not produce a translated contraint for this view
+    iv.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // The image view was a subview of the view
+    [self.view addSubview:iv];
+    
+    // The image view was pointed to by the imageView property
+    self.imageView = iv;
+    
+    // Set the vertical priorities to be less than those of the other views
+    [self.imageView setContentHuggingPriority:200 forAxis:UILayoutConstraintAxisVertical];
+    [self.imageView setContentCompressionResistancePriority:700 forAxis:UILayoutConstraintAxisVertical];
+    
+    NSDictionary *nameMap = @{@"imageView" : self.imageView,
+                              @"dateLabel" : self.dateLabel,
+                              @"toolbar" : self.toolbar};
+    
+    // imageView is 0 pts from superview at left and right edges
+    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imageView]-0-|"
+                                                                             options:0
+                                                                             metrics:nil
+                                                                               views:nameMap];
+    // imageView is 8 pts from dateLabel at its top edge
+    // ... and 8 pts from toolbar at its bottom edge
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[dateLabel]-[imageView]-[toolbar]"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:nameMap];
+    [self.view addConstraints:horizontalConstraints];
+    [self.view addConstraints:verticalConstraints];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
