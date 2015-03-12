@@ -78,18 +78,6 @@
                         <outlet property="delegate" destination="-1" id="Ocq-wc-yek"/>
                     </connections>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-XT-UwD">
-                    <rect key="frame" x="55" y="211" width="265" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="ohX-fc-Vzy"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="44" y="211" width="318" height="21"/>
-                    </variation>
-                </label>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-nL-LqG">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <constraints>
@@ -117,6 +105,18 @@
                     <nil key="highlightedColor"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="44" y="138" width="50" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-XT-UwD">
+                    <rect key="frame" x="55" y="209" width="265" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ohX-fc-Vzy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="44" y="211" width="318" height="21"/>
                     </variation>
                 </label>
             </subviews>
