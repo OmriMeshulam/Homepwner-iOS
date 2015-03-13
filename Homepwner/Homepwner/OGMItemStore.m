@@ -22,10 +22,10 @@
 {
     static OGMItemStore *sharedStore = nil;
     
-    // Do I need to create a shared store (has one been initialized yet?)
-    if (!sharedStore){
-        sharedStore = [[self alloc] initPrivate];
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedStore = [[self alloc]initPrivate];
+    });
     
     return sharedStore;
 }
