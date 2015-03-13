@@ -12,6 +12,8 @@
 
 @interface OGMDetailViewController : UIViewController
 
+- (instancetype)initForNewItem:(BOOL)isNew;
+
 @property (nonatomic, strong) OGMItem *item;
 
 @end

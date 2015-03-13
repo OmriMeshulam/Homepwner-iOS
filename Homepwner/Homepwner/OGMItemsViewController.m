@@ -93,14 +93,11 @@
     // Creating a new OGMItem and adding it to the store
     OGMItem *newItem = [[OGMItemStore sharedStore] createItem];
     
-    // Figuring out where that item is in the array
-    NSInteger lastRow = [[[OGMItemStore sharedStore] allItems] indexOfObject:newItem];
+    OGMDetailViewController *detailViewController = [[OGMDetailViewController alloc]initForNewItem:YES];
+    detailViewController.item = newItem;
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:detailViewController];
     
-    // Make a new index path for the 0th section, last row
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
-    
-    // Inserting this row into the table
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 // For deleting a row
@@ -130,7 +127,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    OGMDetailViewController *detailviewController = [[OGMDetailViewController alloc] init];
+    OGMDetailViewController *detailviewController = [[OGMDetailViewController alloc] initForNewItem:NO];
     
     NSArray *items = [[OGMItemStore sharedStore] allItems];
     OGMItem *selectedItem = items[indexPath.row];
