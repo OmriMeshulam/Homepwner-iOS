@@ -16,4 +16,6 @@
 
 @property (nonatomic, strong) OGMItem *item;
 
+@property (nonatomic, copy) void (^dismissBlock)(void);
+
 @end

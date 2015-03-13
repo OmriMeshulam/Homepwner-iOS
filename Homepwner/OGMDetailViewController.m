@@ -256,7 +256,7 @@
 
 - (void)save:(id)sender
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 - (void)cancel:(id)sender
@@ -264,7 +264,7 @@
     // If the user cancelled, then remove the OGMItem from the store
     [[OGMItemStore sharedStore] removeItem:self.item];
     
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 @end
