@@ -42,7 +42,13 @@
 {
     self = [super init];
     if(self){
-        _privateItems = [[NSMutableArray alloc] init];
+        NSString *path = [self itemArchivePath];
+        _privateItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        
+        // If the array hadn't been saved previously, create a new empty one
+        if(!_privateItems){
+            _privateItems = [[NSMutableArray alloc] init];
+        }
     }
     return self;
 }
@@ -54,7 +60,7 @@
 
 - (OGMItem *)createItem
 {
-    OGMItem *item = [OGMItem randomItem];
+    OGMItem *item = [[OGMItem alloc]init];
     
     [self.privateItems addObject:item];
     
@@ -83,6 +89,27 @@
     
     // Insert item in array at new location
     [self.privateItems insertObject:item atIndex:toIndex];
+}
+
+- (NSString *)itemArchivePath
+{
+    // Make sure that the first argument is NSDocumentDirectory
+    // and not NSDocumentationDirectory
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    // Get the one document directory from that list
+    NSString *documentDirectory = [documentDirectories firstObject];
+    
+    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+}
+
+- (BOOL)saveChanges
+{
+    NSString *path = [self itemArchivePath];
+    NSLog(@"%@",path);
+
+    // Returns YES on success
+    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
 }
 
 @end
