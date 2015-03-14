@@ -43,6 +43,13 @@
     
     if(self){
         _dictionary = [[NSMutableDictionary alloc]init];
+        
+        // Registering imageStore as an observer with the notification center
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self
+               selector:@selector(clearCache:)
+                   name:UIApplicationDidReceiveMemoryWarningNotification
+                 object:nil];
     }
     
     return self;
@@ -101,6 +108,12 @@
     NSString *documentDirectory = [documentDirectories firstObject];
     
     return [documentDirectory stringByAppendingPathComponent:key];
+}
+
+- (void)clearCache:(NSNotification *)note
+{
+    NSLog(@"flushing %d images out of the cache", [self.dictionary count]);
+    [self.dictionary removeAllObjects];
 }
 
 @end
