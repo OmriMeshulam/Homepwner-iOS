@@ -10,6 +10,7 @@
 #import "OGMItemStore.h"
 #import "OGMItem.h"
 #import "OGMDetailViewController.h"
+#import "OGMItemCell.h"
 
 @interface OGMItemsViewController ()
 
@@ -58,8 +59,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Get a new or recycled cell
-    // implicility creating tableViewCell by Apple to get the benefits of the reuse identifier
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    OGMItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OGMItemCell" forIndexPath:indexPath];
     
     // Setting the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
@@ -67,7 +67,12 @@
     NSArray *items = [[OGMItemStore sharedStore] allItems];
     OGMItem *item = items[indexPath.row];
 
-    cell.textLabel.text = [item description];
+    // Configure the cell with the OGMItem
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
+    
+    cell.thumbnailView.image = item.thumbnail;
     
     return cell;
 }
@@ -76,9 +81,11 @@
 {
     [super viewDidLoad];
     
-    // Telling the table view which kind of cell it should instantiate if there are no cells in the reuse pool
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    // Load the NIB File
+    UINib *nib = [UINib nibWithNibName:@"OGMItemCell" bundle:nil];
     
+    // Registering this NIB, which contains the cell
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"OGMItemCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

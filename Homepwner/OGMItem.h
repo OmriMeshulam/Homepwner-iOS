@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface OGMItem : NSObject <NSCoding>
 
@@ -15,7 +16,8 @@
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly, strong) NSDate *dateCreated;
 
-@property(nonatomic, copy) NSString *itemKey;
+@property (nonatomic, copy) NSString *itemKey;
+@property (nonatomic, strong) UIImage *thumbnail;
 
 +(instancetype)randomItem;
 
@@ -26,6 +28,6 @@
 
 - (instancetype)initWithItemName:(NSString*)name;
 
-
+- (void)setThumbnailFrontImage:(UIImage *)image;
 
 @end
