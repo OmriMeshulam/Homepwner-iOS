@@ -11,8 +11,13 @@
 #import "OGMItem.h"
 #import "OGMDetailViewController.h"
 #import "OGMItemCell.h"
+#import "OGMImageStore.h"
+#import "OGMImageViewController.h"
 
-@interface OGMItemsViewController ()
+
+@interface OGMItemsViewController () <UIPopoverControllerDelegate>
+
+@property (nonatomic, strong) UIPopoverController *imagePopover;
 
 @end
 
@@ -71,10 +76,49 @@
     cell.nameLabel.text = item.itemName;
     cell.serialNumberLabel.text = item.serialNumber;
     cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
-    
     cell.thumbnailView.image = item.thumbnail;
     
+    __weak OGMItemCell *weakCell = cell;
+    cell.actionBlock = ^{
+        NSLog(@"Going to show image for %@", item);
+        
+        OGMItemCell *strongCell = weakCell;
+        
+        if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+            NSString *itemKey = item.itemKey;
+            
+            // If there is no image, we don't need to display anything
+            UIImage *img = [[OGMImageStore sharedStore] imageForKey:itemKey];
+            if(!img){
+                return;
+            }
+            
+            // Make a rectangle for the frame of the thumbnail relative to our table view
+            CGRect rect =  [self.view convertRect:strongCell.thumbnailView.bounds
+                                         fromView:strongCell.thumbnailView];
+            
+            // Create a new OGMImageViewController and set its image
+            OGMImageViewController *ivc = [[OGMImageViewController alloc]init];
+            ivc.image = img;
+            
+            // Present a 600x600 popover from the rect
+            self.imagePopover = [[UIPopoverController alloc]initWithContentViewController:ivc];
+            self.imagePopover.delegate = self;
+            self.imagePopover.popoverContentSize = CGSizeMake(600, 600);
+            [self.imagePopover presentPopoverFromRect:rect
+                                               inView:self.view
+                             permittedArrowDirections:UIPopoverArrowDirectionAny
+                                             animated:YES];
+        }
+    };
+    
     return cell;
+}
+
+// Getting rid of the popover if the user taps anywhere outside of it
+- (void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    self.imagePopover = nil;
 }
 
 - (void)viewDidLoad

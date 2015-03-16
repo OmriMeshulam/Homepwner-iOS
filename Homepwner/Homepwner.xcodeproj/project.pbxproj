@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57A5E51AABD955003ED433 /* OGMImageStore.m */; };
+		CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */; };
 		CF8E356A1AA5213E00B698B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35691AA5213E00B698B4 /* main.m */; };
 		CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */; };
 		CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356F1AA5213E00B698B4 /* OGMViewController.m */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		CF57A5E41AABD955003ED433 /* OGMImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageStore.h; sourceTree = "<group>"; };
 		CF57A5E51AABD955003ED433 /* OGMImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageStore.m; sourceTree = "<group>"; };
+		CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageViewController.h; sourceTree = "<group>"; };
+		CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageViewController.m; sourceTree = "<group>"; };
 		CF8E35641AA5213E00B698B4 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8E35681AA5213E00B698B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8E35691AA5213E00B698B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				CF968F421AB644A100A7C585 /* OGMItemCell.h */,
 				CF968F431AB644A100A7C585 /* OGMItemCell.m */,
 				CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */,
+				CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */,
+				CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */,
 				CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */,
 				CF8F89F71AA65C75000DDB8D /* OGMItem.m in Sources */,
 				CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */,

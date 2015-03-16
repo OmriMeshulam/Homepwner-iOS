@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 
+@property (nonatomic, copy) void  (^actionBlock)(void);
+
 @end
