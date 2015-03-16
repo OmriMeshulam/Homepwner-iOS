@@ -20,11 +20,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
-
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 
 @end
 
@@ -46,8 +48,21 @@
                                                                                        action:@selector(cancel:)];
             self.navigationItem.leftBarButtonItem = cancelItem;
         }
+        
+        // Make sure this is NOT in the if (isNew){} block of code
+        NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self
+                          selector:@selector(updateFonts)
+                              name:UIContentSizeCategoryDidChangeNotification
+                            object:nil];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self];
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -134,6 +149,8 @@
     
     // Using that image to put on the screen in the imageView
     self.imageView.image = imageToDisplay;
+    
+    [self updateFonts];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -267,6 +284,20 @@
     [[OGMItemStore sharedStore] removeItem:self.item];
     
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
+}
+
+- (void) updateFonts
+{
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+    self.dateLabel.font = font;
+    
+    self.nameField.font = font;
+    self.serialNumberField.font = font;
+    self.valueField.font = font;
 }
 
 @end

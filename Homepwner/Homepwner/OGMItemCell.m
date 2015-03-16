@@ -25,4 +25,30 @@
     }
 }
 
+- (void)updateInterfaceForDynamicTypeSize
+{
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+}
+
+// Called on an object after it has been unarchived from a NIB file.
+- (void)awakeFromNib
+{
+    [self updateInterfaceForDynamicTypeSize];
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(updateInterfaceForDynamicTypeSize)
+               name:UIContentSizeCategoryDidChangeNotification
+             object:nil];
+}
+
+- (void)dealloc
+{
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc removeObserver:self];
+}
+
 @end
