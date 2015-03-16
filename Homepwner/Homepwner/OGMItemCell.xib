@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="DOn-Kn-Fpn"/>
-                            <constraint firstAttribute="width" constant="40" id="pta-ON-u69"/>
+                            <constraint firstAttribute="width" constant="40" placeholder="YES" id="pta-ON-u69"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-Fz-DYK">
