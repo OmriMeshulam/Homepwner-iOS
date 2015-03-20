@@ -17,9 +17,11 @@
 		CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */; };
 		CF8E35841AA5213F00B698B4 /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */; };
 		CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */; };
-		CF8F89F71AA65C75000DDB8D /* OGMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F89F61AA65C75000DDB8D /* OGMItem.m */; };
 		CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */; };
-		CF968F441AB644A100A7C585 /* OGMItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF968F431AB644A100A7C585 /* OGMItemCell.m */; };
+		CF95A9531ABCC6E100B3FD25 /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9511ABCC6E100B3FD25 /* Homepwner.xcdatamodeld */; };
+		CF95A9561ABCC86500B3FD25 /* OGMImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */; };
+		CF95A9581ABCD00D00B3FD25 /* OGMItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */; };
+		CF95A95B1ABCD0D000B3FD25 /* OGMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */; };
 		CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */; };
 		CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */; };
 		CFFDFD0E1AAA6E01005D9DEA /* OGMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */; };
@@ -55,12 +57,15 @@
 		CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomepwnerTests.m; sourceTree = "<group>"; };
 		CF8E358D1AA5234B00B698B4 /* OGMItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemsViewController.h; sourceTree = "<group>"; };
 		CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemsViewController.m; sourceTree = "<group>"; };
-		CF8F89F51AA65C75000DDB8D /* OGMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OGMItem.h; path = ../OGMItem.h; sourceTree = "<group>"; };
-		CF8F89F61AA65C75000DDB8D /* OGMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OGMItem.m; path = ../OGMItem.m; sourceTree = "<group>"; };
 		CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemStore.h; sourceTree = "<group>"; };
 		CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemStore.m; sourceTree = "<group>"; };
+		CF95A9521ABCC6E100B3FD25 /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
+		CF95A9541ABCC86500B3FD25 /* OGMImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageTransformer.h; sourceTree = "<group>"; };
+		CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageTransformer.m; sourceTree = "<group>"; };
+		CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemCell.m; sourceTree = "<group>"; };
+		CF95A9591ABCD0D000B3FD25 /* OGMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItem.h; sourceTree = "<group>"; };
+		CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItem.m; sourceTree = "<group>"; };
 		CF968F421AB644A100A7C585 /* OGMItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemCell.h; sourceTree = "<group>"; };
-		CF968F431AB644A100A7C585 /* OGMItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemCell.m; sourceTree = "<group>"; };
 		CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OGMItemCell.xib; sourceTree = "<group>"; };
 		CFFDFD0A1AAA6E01005D9DEA /* OGMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OGMDetailViewController.h; path = ../OGMDetailViewController.h; sourceTree = "<group>"; };
 		CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OGMDetailViewController.m; path = ../OGMDetailViewController.m; sourceTree = "<group>"; };
@@ -115,8 +120,6 @@
 				CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */,
 				CF8E358D1AA5234B00B698B4 /* OGMItemsViewController.h */,
 				CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */,
-				CF8F89F51AA65C75000DDB8D /* OGMItem.h */,
-				CF8F89F61AA65C75000DDB8D /* OGMItem.m */,
 				CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */,
 				CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */,
 				CF8E35711AA5213E00B698B4 /* Main.storyboard */,
@@ -126,10 +129,15 @@
 				CF57A5E41AABD955003ED433 /* OGMImageStore.h */,
 				CF57A5E51AABD955003ED433 /* OGMImageStore.m */,
 				CF968F421AB644A100A7C585 /* OGMItemCell.h */,
-				CF968F431AB644A100A7C585 /* OGMItemCell.m */,
+				CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */,
 				CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */,
+				CF95A9511ABCC6E100B3FD25 /* Homepwner.xcdatamodeld */,
+				CF95A9591ABCD0D000B3FD25 /* OGMItem.h */,
+				CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */,
 				CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */,
 				CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */,
+				CF95A9541ABCC86500B3FD25 /* OGMImageTransformer.h */,
+				CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -263,14 +271,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */,
+				CF95A9561ABCC86500B3FD25 /* OGMImageTransformer.m in Sources */,
 				CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */,
-				CF8F89F71AA65C75000DDB8D /* OGMItem.m in Sources */,
 				CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */,
 				CF8E356A1AA5213E00B698B4 /* main.m in Sources */,
-				CF968F441AB644A100A7C585 /* OGMItemCell.m in Sources */,
+				CF95A9531ABCC6E100B3FD25 /* Homepwner.xcdatamodeld in Sources */,
+				CF95A95B1ABCD0D000B3FD25 /* OGMItem.m in Sources */,
 				CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */,
 				CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */,
 				CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */,
+				CF95A9581ABCD00D00B3FD25 /* OGMItemCell.m in Sources */,
 				CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +487,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF95A9511ABCC6E100B3FD25 /* Homepwner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF95A9521ABCC6E100B3FD25 /* Homepwner.xcdatamodel */,
+			);
+			currentVersion = CF95A9521ABCC6E100B3FD25 /* Homepwner.xcdatamodel */;
+			path = Homepwner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CF8E355C1AA5213E00B698B4 /* Project object */;
 }

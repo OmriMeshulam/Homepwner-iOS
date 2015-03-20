@@ -217,7 +217,7 @@
     // Get picked image from the info dictionary
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    [self.item setThumbnailFrontImage:image];
+    [self.item setThumbnailFromImage:image];
     
     // Storing the image in the OGMImageStore for this key
     [[OGMImageStore sharedStore] setImage:image forKey:self.item.itemKey];
