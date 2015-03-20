@@ -22,6 +22,7 @@
 		CF95A9561ABCC86500B3FD25 /* OGMImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */; };
 		CF95A9581ABCD00D00B3FD25 /* OGMItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */; };
 		CF95A95B1ABCD0D000B3FD25 /* OGMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */; };
+		CF95A95E1ABCE27600B3FD25 /* OGMAssetTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */; };
 		CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */; };
 		CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */; };
 		CFFDFD0E1AAA6E01005D9DEA /* OGMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */; };
@@ -65,6 +66,8 @@
 		CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemCell.m; sourceTree = "<group>"; };
 		CF95A9591ABCD0D000B3FD25 /* OGMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItem.h; sourceTree = "<group>"; };
 		CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItem.m; sourceTree = "<group>"; };
+		CF95A95C1ABCE27500B3FD25 /* OGMAssetTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMAssetTypeController.h; sourceTree = "<group>"; };
+		CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMAssetTypeController.m; sourceTree = "<group>"; };
 		CF968F421AB644A100A7C585 /* OGMItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemCell.h; sourceTree = "<group>"; };
 		CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OGMItemCell.xib; sourceTree = "<group>"; };
 		CFFDFD0A1AAA6E01005D9DEA /* OGMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OGMDetailViewController.h; path = ../OGMDetailViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */,
 				CF95A9541ABCC86500B3FD25 /* OGMImageTransformer.h */,
 				CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */,
+				CF95A95C1ABCE27500B3FD25 /* OGMAssetTypeController.h */,
+				CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */,
 				CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */,
 				CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */,
+				CF95A95E1ABCE27600B3FD25 /* OGMAssetTypeController.m in Sources */,
 				CF95A9581ABCD00D00B3FD25 /* OGMItemCell.m in Sources */,
 				CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */,
 			);
