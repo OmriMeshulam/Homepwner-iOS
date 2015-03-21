@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57A5E51AABD955003ED433 /* OGMImageStore.m */; };
+		CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */; };
+		CF8E356A1AA5213E00B698B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35691AA5213E00B698B4 /* main.m */; };
+		CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */; };
+		CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356F1AA5213E00B698B4 /* OGMViewController.m */; };
+		CF8E35731AA5213E00B698B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35711AA5213E00B698B4 /* Main.storyboard */; };
+		CF8E35751AA5213E00B698B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35741AA5213E00B698B4 /* Images.xcassets */; };
+		CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */; };
+		CF8E35841AA5213F00B698B4 /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */; };
+		CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */; };
+		CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */; };
+		CF95A9531ABCC6E100B3FD25 /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9511ABCC6E100B3FD25 /* Homepwner.xcdatamodeld */; };
+		CF95A9561ABCC86500B3FD25 /* OGMImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */; };
+		CF95A9581ABCD00D00B3FD25 /* OGMItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */; };
+		CF95A95B1ABCD0D000B3FD25 /* OGMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */; };
+		CF95A95E1ABCE27600B3FD25 /* OGMAssetTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */; };
+		CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */; };
+		CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */; };
+		CFFDFD0E1AAA6E01005D9DEA /* OGMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF8E357E1AA5213F00B698B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF8E355C1AA5213E00B698B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF8E35631AA5213E00B698B4;
+			remoteInfo = Homepwner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF57A5E41AABD955003ED433 /* OGMImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageStore.h; sourceTree = "<group>"; };
+		CF57A5E51AABD955003ED433 /* OGMImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageStore.m; sourceTree = "<group>"; };
+		CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageViewController.h; sourceTree = "<group>"; };
+		CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageViewController.m; sourceTree = "<group>"; };
+		CF8E35641AA5213E00B698B4 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8E35681AA5213E00B698B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8E35691AA5213E00B698B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF8E356B1AA5213E00B698B4 /* OGMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGMAppDelegate.h; sourceTree = "<group>"; };
+		CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGMAppDelegate.m; sourceTree = "<group>"; };
+		CF8E356E1AA5213E00B698B4 /* OGMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGMViewController.h; sourceTree = "<group>"; };
+		CF8E356F1AA5213E00B698B4 /* OGMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGMViewController.m; sourceTree = "<group>"; };
+		CF8E35721AA5213E00B698B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF8E35741AA5213E00B698B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF8E35771AA5213E00B698B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CF8E357D1AA5213F00B698B4 /* HomepwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8E35821AA5213F00B698B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomepwnerTests.m; sourceTree = "<group>"; };
+		CF8E358D1AA5234B00B698B4 /* OGMItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemsViewController.h; sourceTree = "<group>"; };
+		CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemsViewController.m; sourceTree = "<group>"; };
+		CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemStore.h; sourceTree = "<group>"; };
+		CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemStore.m; sourceTree = "<group>"; };
+		CF95A9521ABCC6E100B3FD25 /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
+		CF95A9541ABCC86500B3FD25 /* OGMImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageTransformer.h; sourceTree = "<group>"; };
+		CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageTransformer.m; sourceTree = "<group>"; };
+		CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItemCell.m; sourceTree = "<group>"; };
+		CF95A9591ABCD0D000B3FD25 /* OGMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItem.h; sourceTree = "<group>"; };
+		CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMItem.m; sourceTree = "<group>"; };
+		CF95A95C1ABCE27500B3FD25 /* OGMAssetTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMAssetTypeController.h; sourceTree = "<group>"; };
+		CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMAssetTypeController.m; sourceTree = "<group>"; };
+		CF968F421AB644A100A7C585 /* OGMItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMItemCell.h; sourceTree = "<group>"; };
+		CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OGMItemCell.xib; sourceTree = "<group>"; };
+		CFFDFD0A1AAA6E01005D9DEA /* OGMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OGMDetailViewController.h; path = ../OGMDetailViewController.h; sourceTree = "<group>"; };
+		CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OGMDetailViewController.m; path = ../OGMDetailViewController.m; sourceTree = "<group>"; };
+		CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OGMDetailViewController.xib; path = ../OGMDetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF8E35611AA5213E00B698B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8E357A1AA5213F00B698B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF8E355B1AA5213E00B698B4 = {
+			isa = PBXGroup;
+			children = (
+				CF8E35661AA5213E00B698B4 /* Homepwner */,
+				CF8E35801AA5213F00B698B4 /* HomepwnerTests */,
+				CF8E35651AA5213E00B698B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF8E35651AA5213E00B698B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF8E35641AA5213E00B698B4 /* Homepwner.app */,
+				CF8E357D1AA5213F00B698B4 /* HomepwnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF8E35661AA5213E00B698B4 /* Homepwner */ = {
+			isa = PBXGroup;
+			children = (
+				CF8E356B1AA5213E00B698B4 /* OGMAppDelegate.h */,
+				CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */,
+				CF8E356E1AA5213E00B698B4 /* OGMViewController.h */,
+				CF8E356F1AA5213E00B698B4 /* OGMViewController.m */,
+				CFFDFD0A1AAA6E01005D9DEA /* OGMDetailViewController.h */,
+				CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */,
+				CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */,
+				CF8E358D1AA5234B00B698B4 /* OGMItemsViewController.h */,
+				CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */,
+				CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */,
+				CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */,
+				CF8E35711AA5213E00B698B4 /* Main.storyboard */,
+				CF8E35741AA5213E00B698B4 /* Images.xcassets */,
+				CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */,
+				CF8E35671AA5213E00B698B4 /* Supporting Files */,
+				CF57A5E41AABD955003ED433 /* OGMImageStore.h */,
+				CF57A5E51AABD955003ED433 /* OGMImageStore.m */,
+				CF968F421AB644A100A7C585 /* OGMItemCell.h */,
+				CF95A9571ABCD00D00B3FD25 /* OGMItemCell.m */,
+				CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */,
+				CF95A9511ABCC6E100B3FD25 /* Homepwner.xcdatamodeld */,
+				CF95A9591ABCD0D000B3FD25 /* OGMItem.h */,
+				CF95A95A1ABCD0D000B3FD25 /* OGMItem.m */,
+				CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */,
+				CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */,
+				CF95A9541ABCC86500B3FD25 /* OGMImageTransformer.h */,
+				CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */,
+				CF95A95C1ABCE27500B3FD25 /* OGMAssetTypeController.h */,
+				CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */,
+			);
+			path = Homepwner;
+			sourceTree = "<group>";
+		};
+		CF8E35671AA5213E00B698B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF8E35681AA5213E00B698B4 /* Info.plist */,
+				CF8E35691AA5213E00B698B4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF8E35801AA5213F00B698B4 /* HomepwnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */,
+				CF8E35811AA5213F00B698B4 /* Supporting Files */,
+			);
+			path = HomepwnerTests;
+			sourceTree = "<group>";
+		};
+		CF8E35811AA5213F00B698B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF8E35821AA5213F00B698B4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF8E35631AA5213E00B698B4 /* Homepwner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF8E35871AA5213F00B698B4 /* Build configuration list for PBXNativeTarget "Homepwner" */;
+			buildPhases = (
+				CF8E35601AA5213E00B698B4 /* Sources */,
+				CF8E35611AA5213E00B698B4 /* Frameworks */,
+				CF8E35621AA5213E00B698B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Homepwner;
+			productName = Homepwner;
+			productReference = CF8E35641AA5213E00B698B4 /* Homepwner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF8E357C1AA5213F00B698B4 /* HomepwnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF8E358A1AA5213F00B698B4 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */;
+			buildPhases = (
+				CF8E35791AA5213F00B698B4 /* Sources */,
+				CF8E357A1AA5213F00B698B4 /* Frameworks */,
+				CF8E357B1AA5213F00B698B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF8E357F1AA5213F00B698B4 /* PBXTargetDependency */,
+			);
+			name = HomepwnerTests;
+			productName = HomepwnerTests;
+			productReference = CF8E357D1AA5213F00B698B4 /* HomepwnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF8E355C1AA5213E00B698B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Omri Meshulam";
+				TargetAttributes = {
+					CF8E35631AA5213E00B698B4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CF8E357C1AA5213F00B698B4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CF8E35631AA5213E00B698B4;
+					};
+				};
+			};
+			buildConfigurationList = CF8E355F1AA5213E00B698B4 /* Build configuration list for PBXProject "Homepwner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF8E355B1AA5213E00B698B4;
+			productRefGroup = CF8E35651AA5213E00B698B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF8E35631AA5213E00B698B4 /* Homepwner */,
+				CF8E357C1AA5213F00B698B4 /* HomepwnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF8E35621AA5213E00B698B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFDFD0E1AAA6E01005D9DEA /* OGMDetailViewController.xib in Resources */,
+				CF8E35731AA5213E00B698B4 /* Main.storyboard in Resources */,
+				CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */,
+				CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */,
+				CF8E35751AA5213E00B698B4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8E357B1AA5213F00B698B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF8E35601AA5213E00B698B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */,
+				CF95A9561ABCC86500B3FD25 /* OGMImageTransformer.m in Sources */,
+				CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */,
+				CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */,
+				CF8E356A1AA5213E00B698B4 /* main.m in Sources */,
+				CF95A9531ABCC6E100B3FD25 /* Homepwner.xcdatamodeld in Sources */,
+				CF95A95B1ABCD0D000B3FD25 /* OGMItem.m in Sources */,
+				CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */,
+				CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */,
+				CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */,
+				CF95A95E1ABCE27600B3FD25 /* OGMAssetTypeController.m in Sources */,
+				CF95A9581ABCD00D00B3FD25 /* OGMItemCell.m in Sources */,
+				CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8E35791AA5213F00B698B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8E35841AA5213F00B698B4 /* HomepwnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF8E357F1AA5213F00B698B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF8E35631AA5213E00B698B4 /* Homepwner */;
+			targetProxy = CF8E357E1AA5213F00B698B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF8E35711AA5213E00B698B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF8E35721AA5213E00B698B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF8E35771AA5213E00B698B4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF8E35851AA5213F00B698B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					VIEW_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF8E35861AA5213F00B698B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF8E35881AA5213F00B698B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Homepwner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF8E35891AA5213F00B698B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Homepwner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF8E358B1AA5213F00B698B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HomepwnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homepwner.app/Homepwner";
+			};
+			name = Debug;
+		};
+		CF8E358C1AA5213F00B698B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HomepwnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homepwner.app/Homepwner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF8E355F1AA5213E00B698B4 /* Build configuration list for PBXProject "Homepwner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8E35851AA5213F00B698B4 /* Debug */,
+				CF8E35861AA5213F00B698B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF8E35871AA5213F00B698B4 /* Build configuration list for PBXNativeTarget "Homepwner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8E35881AA5213F00B698B4 /* Debug */,
+				CF8E35891AA5213F00B698B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF8E358A1AA5213F00B698B4 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8E358B1AA5213F00B698B4 /* Debug */,
+				CF8E358C1AA5213F00B698B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF95A9511ABCC6E100B3FD25 /* Homepwner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF95A9521ABCC6E100B3FD25 /* Homepwner.xcdatamodel */,
+			);
+			currentVersion = CF95A9521ABCC6E100B3FD25 /* Homepwner.xcdatamodel */;
+			path = Homepwner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CF8E355C1AA5213E00B698B4 /* Project object */;
+}
