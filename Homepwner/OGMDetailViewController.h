@@ -10,7 +10,7 @@
 
 @class OGMItem;
 
-@interface OGMDetailViewController : UIViewController
+@interface OGMDetailViewController : UIViewController <UIViewControllerRestoration>
 
 - (instancetype)initForNewItem:(BOOL)isNew;
 

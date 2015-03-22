@@ -15,7 +15,7 @@
 #import "OGMImageViewController.h"
 
 
-@interface OGMItemsViewController () <UIPopoverControllerDelegate>
+@interface OGMItemsViewController () <UIPopoverControllerDelegate, UIDataSourceModelAssociation>
 
 @property (nonatomic, strong) UIPopoverController *imagePopover;
 
@@ -32,6 +32,8 @@
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"Homepwner";
         
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
         // Creating a new bar button item that will send
         // addNewItem: to OGMItemsViewController
         UIBarButtonItem *bbi = [[UIBarButtonItem alloc]
@@ -142,6 +144,8 @@
     
     // Registering this NIB, which contains the cell
     [self.tableView registerNib:nib forCellReuseIdentifier:@"OGMItemCell"];
+    
+    self.tableView.restorationIdentifier = @"OGMItemsViewControllerTableView";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -162,6 +166,7 @@
         [self.tableView reloadData];
     };
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:detailViewController];
+    navController.restorationIdentifier = NSStringFromClass([navController class]);
     
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
     
@@ -225,6 +230,58 @@
     NSNumber *cellHeight = cellHeightDictionary[userSize];
     [self.tableView setRowHeight:cellHeight.floatValue];
     [self.tableView reloadData];
+}
+
+//  Required method for UIViewControllerRestoration protocol
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
+{
+    return [[self alloc] init];
+}
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    [coder encodeBool:self.isEditing forKey:@"TableViewIsEditing"];
+    
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    self.editing = [coder decodeBoolForKey:@"TableViewIsEditing"];
+    
+    [super decodeRestorableStateWithCoder:coder];
+}
+
+- (NSString *)modelIdentifierForElementAtIndexPath:(NSIndexPath *)idx inView:(UIView *)view
+{
+    NSString *identifier = nil;
+    
+    if (idx && view){
+        // Return an identifier of the given NSIndexPath
+        // in case next time the data source changes
+        OGMItem *item = [[OGMItemStore sharedStore]allItems][idx.row];
+        identifier = item.itemKey;
+    }
+    
+    return identifier;
+}
+
+- (NSIndexPath *)indexPathForElementWithModelIdentifier:(NSString *)identifier inView:(UIView *)view
+{
+    NSIndexPath *indexPath = nil;
+    
+    if(identifier && view){
+        NSArray *items = [[OGMItemStore sharedStore]allItems];
+        for (OGMItem *item in items){
+            if ([identifier isEqualToString:item.itemKey]){
+                int row = [items indexOfObjectIdenticalTo:item];
+                indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+                break;
+            }
+        }
+    }
+    
+    return indexPath;
 }
 
 @end

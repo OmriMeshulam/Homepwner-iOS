@@ -19,23 +19,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; //side effect of disabling autorotation
+    // If state restoration did not occur,
+    // set up the view controller hierarchy
+    if (!self.window.rootViewController){
+        OGMItemsViewController *itemsViewController = [[OGMItemsViewController alloc] init];
+        
+        // Creating an instance of a UINavigationController
+        // its stack contains only itemsViewController
+        UINavigationController *navController = [[UINavigationController alloc]
+                                                 initWithRootViewController:itemsViewController];
+        
+        // Give the navigation controller a restoration identifier that is
+        // the same name as its class
+        navController.restorationIdentifier = NSStringFromClass([navController class]);
+        
+        // Placing navigation controller's view in the window hierarchy
+        self.window.rootViewController = navController;
+    }
     
-    OGMItemsViewController *itemsViewController = [[OGMItemsViewController alloc] init];
-    
-    // Creating an instance of a UINavigationController
-    // its stack contains only itemsViewController
-    UINavigationController *navController = [[UINavigationController alloc]
-                                             initWithRootViewController:itemsViewController];
-    // Placing navigation controller's view in the window hierarchy
-    self.window.rootViewController = navController;
-    
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
 #ifdef VIEW_DEBUG
     NSLog(@"%@", [self.window performSelector:@selector(recursiveDescription)]);
 #endif
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     return YES;
 }
@@ -68,6 +82,34 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder
+{
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder
+{
+    return YES;
+}
+
+- (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
+{
+    // Create a new navigation controller
+    UIViewController *vc = [[UINavigationController alloc]init];
+    
+    // The last object in the path array is the restoration
+    // identifier for this view controller
+    vc.restorationIdentifier = [identifierComponents lastObject];
+    
+    // If there is only 1 identifier component. then
+    // this is the root view controller
+    if ([identifierComponents count] == 1){
+        self.window.rootViewController = vc;
+    }
+    
+    return vc;
 }
 
 @end

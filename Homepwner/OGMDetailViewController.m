@@ -39,6 +39,9 @@
     self = [super initWithNibName:nil bundle:nil];
     
     if(self){
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
+        
         if(isNew){
             UIBarButtonItem *doneItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                      target:self
@@ -317,6 +320,46 @@
     
     [self.navigationController pushViewController:avc
                                          animated:YES];
+}
+
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
+{
+    BOOL isNew = NO;
+    if ([identifierComponents count] == 3){
+        isNew = YES;
+    }
+    return [[self alloc]initForNewItem:isNew];
+}
+
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    NSString *itemKey = [coder decodeObjectForKey:@"item.itemKey"];
+    
+    for (OGMItem *item in [[OGMItemStore sharedStore]allItems]){
+        if ([itemKey isEqualToString:item.itemKey]){
+            self.item = item;
+            break;
+        }
+    }
+    
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.item.itemKey
+                 forKey:@"item.itemKey"];
+    
+    // Save changes into item (text fields)
+    self.item.itemName = self.nameField.text;
+    self.item.serialNumber = self.serialNumberField.text;
+    self.item.valueInDollars = [self.valueField.text intValue];
+    
+    // Have store save changes to the disk
+    [[OGMItemStore sharedStore] saveChanges];
+    
+    [super encodeRestorableStateWithCoder:coder];
 }
 
 @end

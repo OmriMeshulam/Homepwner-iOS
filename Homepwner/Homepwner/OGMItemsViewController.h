@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OGMItemsViewController : UITableViewController
+@interface OGMItemsViewController : UITableViewController <UIViewControllerRestoration>
 
 @end
