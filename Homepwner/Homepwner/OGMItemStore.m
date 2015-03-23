@@ -9,6 +9,7 @@
 #import "OGMItemStore.h"
 #import "OGMItem.h"
 #import "OGMImageStore.h"
+#import "OGMAppDelegate.h"
 
 @import CoreData;
 
@@ -96,6 +97,12 @@
                                                   inManagedObjectContext:self.context];
     item.orderingValue = order;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    item.valueInDollars = [defaults integerForKey:OGMNextItemValuePrefsKey];
+    item.itemName = [defaults objectForKey:OGMNextItemNamePrefsKey];
+    
+    // Just for fun, listing out all the defaults
+    NSLog(@"defaults = %@", [defaults dictionaryRepresentation]);
     
     [self.privateItems addObject:item];
     

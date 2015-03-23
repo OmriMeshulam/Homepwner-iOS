@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF51F7E71AC0D8430021E02A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF51F7E61AC0D8430021E02A /* Settings.bundle */; };
 		CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57A5E51AABD955003ED433 /* OGMImageStore.m */; };
 		CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */; };
 		CF8E356A1AA5213E00B698B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35691AA5213E00B698B4 /* main.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF51F7E61AC0D8430021E02A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CF57A5E41AABD955003ED433 /* OGMImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageStore.h; sourceTree = "<group>"; };
 		CF57A5E51AABD955003ED433 /* OGMImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageStore.m; sourceTree = "<group>"; };
 		CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageViewController.h; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				CF95A9551ABCC86500B3FD25 /* OGMImageTransformer.m */,
 				CF95A95C1ABCE27500B3FD25 /* OGMAssetTypeController.h */,
 				CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */,
+				CF51F7E61AC0D8430021E02A /* Settings.bundle */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				CF8E35731AA5213E00B698B4 /* Main.storyboard in Resources */,
 				CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */,
 				CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */,
+				CF51F7E71AC0D8430021E02A /* Settings.bundle in Resources */,
 				CF8E35751AA5213E00B698B4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,22 @@
 #import "OGMItemsViewController.h"
 #import "OGMItemStore.h"
 
+NSString * const OGMNextItemValuePrefsKey = @"NextItemValue";
+NSString * const OGMNextItemNamePrefsKey = @"NextItemName";
+
 @interface OGMAppDelegate ()
 
 @end
 
 @implementation OGMAppDelegate
 
++ (void)initialize
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *factorySettings = @{OGMNextItemValuePrefsKey: @75,
+                                      OGMNextItemNamePrefsKey: @"Coffee Cup"};
+    [defaults registerDefaults:factorySettings];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     

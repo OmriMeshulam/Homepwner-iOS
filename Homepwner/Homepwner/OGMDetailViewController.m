@@ -11,6 +11,7 @@
 #import "OGMImageStore.h"
 #import "OGMItemStore.h"
 #import "OGMAssetTypeController.h"
+#import "OGMAppDelegate.h"
 
 @interface OGMDetailViewController ()
     <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIPopoverControllerDelegate>
@@ -176,6 +177,20 @@
     OGMItem *item = self.item;
     item.itemName = self.nameField.text;
     item.serialNumber = self.serialNumberField.text;
+    
+    int newValue = [self.valueField.text intValue];
+    
+    // Is it changed?
+    if (newValue != item.valueInDollars){
+        // Put it in the item
+        item.valueInDollars = newValue;
+        
+        // Store it as the default value for the next item
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setInteger:newValue
+                      forKey:OGMNextItemValuePrefsKey];
+    }
+    
     item.valueInDollars = [self.valueField.text intValue];
 }
 

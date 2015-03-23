@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+// Global variables
+extern NSString * const OGMNextItemValuePrefsKey;
+extern NSString * const OGMNextItemNamePrefsKey;
+
 @interface OGMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 
 @end
 
