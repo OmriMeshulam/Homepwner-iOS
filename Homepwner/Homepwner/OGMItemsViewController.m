@@ -30,7 +30,7 @@
     
     if(self){
         UINavigationItem *navItem = self.navigationItem;
-        navItem.title = NSLocalizedString(@"Homepwner", @"Name of application");
+        navItem.title = @"Homepwner";
         
         self.restorationIdentifier = NSStringFromClass([self class]);
         self.restorationClass = [self class];
@@ -49,12 +49,6 @@
         [nc addObserver:self
                selector:@selector(updateTableViewsForDynamicTypeSize)
                    name:UIContentSizeCategoryDidChangeNotification
-                 object:nil];
-        
-        // Register for locale change notifications
-        [nc addObserver:self
-               selector:@selector(localeChanged:)
-                   name:NSCurrentLocaleDidChangeNotification
                  object:nil];
     }
     
@@ -95,12 +89,7 @@
     // Configure the cell with the OGMItem
     cell.nameLabel.text = item.itemName;
     cell.serialNumberLabel.text = item.serialNumber;
-    static NSNumberFormatter *currencyFormatter = nil;
-    if (currencyFormatter == nil){
-        currencyFormatter = [[NSNumberFormatter alloc]init];
-        currencyFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
-    }
-    cell.valueLabel.text = [currencyFormatter stringFromNumber:@(item.valueInDollars)];
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     cell.thumbnailView.image = item.thumbnail;
     
     __weak OGMItemCell *weakCell = cell;
@@ -293,11 +282,6 @@
     }
     
     return indexPath;
-}
-
-- (void)localeChanged:(NSNotification *)note
-{
-    [self.tableView reloadData];
 }
 
 @end

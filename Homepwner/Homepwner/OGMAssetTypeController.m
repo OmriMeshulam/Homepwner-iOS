@@ -14,11 +14,7 @@
 
 - (instancetype) init
 {
-    self = [super initWithStyle:UITableViewStylePlain];
-    if (self) {
-        self.navigationItem.title = NSLocalizedString(@"Asset Type", @"OGMAssetTypeController title");
-    }
-    return self;
+    return [super initWithStyle:UITableViewStylePlain];
 }
 
 - (instancetype)initWithStyle:(UITableViewStyle)style

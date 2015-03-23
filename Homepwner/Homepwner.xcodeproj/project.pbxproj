@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		CF57A5E61AABD955003ED433 /* OGMImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57A5E51AABD955003ED433 /* OGMImageStore.m */; };
 		CF66FACB1AB7515D00A16856 /* OGMImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */; };
-		CF8AA2A31AC0B22600F015D5 /* OGMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8AA2A51AC0B22600F015D5 /* OGMDetailViewController.xib */; };
-		CF8AA2BA1AC0BC5900F015D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF8AA2B91AC0BC5900F015D5 /* Localizable.strings */; };
 		CF8E356A1AA5213E00B698B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35691AA5213E00B698B4 /* main.m */; };
 		CF8E356D1AA5213E00B698B4 /* OGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */; };
 		CF8E35701AA5213E00B698B4 /* OGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E356F1AA5213E00B698B4 /* OGMViewController.m */; };
+		CF8E35731AA5213E00B698B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35711AA5213E00B698B4 /* Main.storyboard */; };
 		CF8E35751AA5213E00B698B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35741AA5213E00B698B4 /* Images.xcassets */; };
+		CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */; };
 		CF8E35841AA5213F00B698B4 /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */; };
 		CF8E358F1AA5234B00B698B4 /* OGMItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */; };
 		CF8F89FA1AA65EFB000DDB8D /* OGMItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */; };
@@ -25,6 +25,7 @@
 		CF95A95E1ABCE27600B3FD25 /* OGMAssetTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95A95D1ABCE27500B3FD25 /* OGMAssetTypeController.m */; };
 		CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */; };
 		CFFDFD0D1AAA6E01005D9DEA /* OGMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */; };
+		CFFDFD0E1AAA6E01005D9DEA /* OGMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,6 @@
 		CF57A5E51AABD955003ED433 /* OGMImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageStore.m; sourceTree = "<group>"; };
 		CF66FAC91AB7515D00A16856 /* OGMImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMImageViewController.h; sourceTree = "<group>"; };
 		CF66FACA1AB7515D00A16856 /* OGMImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMImageViewController.m; sourceTree = "<group>"; };
-		CF8AA2A61AC0B2C900F015D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OGMDetailViewController.xib; sourceTree = "<group>"; };
-		CF8AA2B91AC0BC5900F015D5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		CF8AA2BD1AC0BDB900F015D5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/OGMDetailViewController.strings; sourceTree = "<group>"; };
 		CF8E35641AA5213E00B698B4 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8E35681AA5213E00B698B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8E35691AA5213E00B698B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,7 +50,9 @@
 		CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGMAppDelegate.m; sourceTree = "<group>"; };
 		CF8E356E1AA5213E00B698B4 /* OGMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGMViewController.h; sourceTree = "<group>"; };
 		CF8E356F1AA5213E00B698B4 /* OGMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGMViewController.m; sourceTree = "<group>"; };
+		CF8E35721AA5213E00B698B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF8E35741AA5213E00B698B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF8E35771AA5213E00B698B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF8E357D1AA5213F00B698B4 /* HomepwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8E35821AA5213F00B698B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8E35831AA5213F00B698B4 /* HomepwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomepwnerTests.m; sourceTree = "<group>"; };
@@ -72,6 +72,7 @@
 		CF968F4B1AB6455F00A7C585 /* OGMItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OGMItemCell.xib; sourceTree = "<group>"; };
 		CFFDFD0A1AAA6E01005D9DEA /* OGMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGMDetailViewController.h; sourceTree = "<group>"; };
 		CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGMDetailViewController.m; sourceTree = "<group>"; };
+		CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OGMDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,19 +114,20 @@
 		CF8E35661AA5213E00B698B4 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
-				CF8AA2B91AC0BC5900F015D5 /* Localizable.strings */,
 				CF8E356B1AA5213E00B698B4 /* OGMAppDelegate.h */,
 				CF8E356C1AA5213E00B698B4 /* OGMAppDelegate.m */,
 				CF8E356E1AA5213E00B698B4 /* OGMViewController.h */,
 				CF8E356F1AA5213E00B698B4 /* OGMViewController.m */,
 				CFFDFD0A1AAA6E01005D9DEA /* OGMDetailViewController.h */,
 				CFFDFD0B1AAA6E01005D9DEA /* OGMDetailViewController.m */,
-				CF8AA2A51AC0B22600F015D5 /* OGMDetailViewController.xib */,
+				CFFDFD0C1AAA6E01005D9DEA /* OGMDetailViewController.xib */,
 				CF8E358D1AA5234B00B698B4 /* OGMItemsViewController.h */,
 				CF8E358E1AA5234B00B698B4 /* OGMItemsViewController.m */,
 				CF8F89F81AA65EFB000DDB8D /* OGMItemStore.h */,
 				CF8F89F91AA65EFB000DDB8D /* OGMItemStore.m */,
+				CF8E35711AA5213E00B698B4 /* Main.storyboard */,
 				CF8E35741AA5213E00B698B4 /* Images.xcassets */,
+				CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */,
 				CF8E35671AA5213E00B698B4 /* Supporting Files */,
 				CF57A5E41AABD955003ED433 /* OGMImageStore.h */,
 				CF57A5E51AABD955003ED433 /* OGMImageStore.m */,
@@ -232,8 +234,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
-				es,
 			);
 			mainGroup = CF8E355B1AA5213E00B698B4;
 			productRefGroup = CF8E35651AA5213E00B698B4 /* Products */;
@@ -251,9 +253,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8AA2A31AC0B22600F015D5 /* OGMDetailViewController.xib in Resources */,
-				CF8AA2BA1AC0BC5900F015D5 /* Localizable.strings in Resources */,
+				CFFDFD0E1AAA6E01005D9DEA /* OGMDetailViewController.xib in Resources */,
+				CF8E35731AA5213E00B698B4 /* Main.storyboard in Resources */,
 				CF968F4C1AB6455F00A7C585 /* OGMItemCell.xib in Resources */,
+				CF8E35781AA5213E00B698B4 /* LaunchScreen.xib in Resources */,
 				CF8E35751AA5213E00B698B4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,13 +310,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF8AA2A51AC0B22600F015D5 /* OGMDetailViewController.xib */ = {
+		CF8E35711AA5213E00B698B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CF8AA2A61AC0B2C900F015D5 /* Base */,
-				CF8AA2BD1AC0BDB900F015D5 /* es */,
+				CF8E35721AA5213E00B698B4 /* Base */,
 			);
-			name = OGMDetailViewController.xib;
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF8E35761AA5213E00B698B4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF8E35771AA5213E00B698B4 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
