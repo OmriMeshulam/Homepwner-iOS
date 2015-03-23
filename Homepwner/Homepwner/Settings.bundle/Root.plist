@@ -8,7 +8,7 @@
 			<key>AutocorrectionType</key>
 			<string>Yes</string>
 			<key>DefaultValue</key>
-			<string>Coffee Cup</string>
+			<string>Default Item Name</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>
